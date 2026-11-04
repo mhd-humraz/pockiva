@@ -1,0 +1,6 @@
+The app source does not make HTTP requests and has no backend or login.
+For the strongest offline-only Android manifest, inspect:
+android/app/src/main/AndroidManifest.xml
+and ensure there is no:
+<uses-permission android:name="android.permission.INTERNET" />
+Flutter's standard template may include this permission depending on the template/tooling version. Remove it if you want Android to declare no network permission at all.

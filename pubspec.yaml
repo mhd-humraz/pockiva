@@ -1,0 +1,47 @@
+name: Pockiva
+description: Fully offline personal savings goal tracker.
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.3.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  sqflite: ^2.4.2
+  path: ^1.9.1
+  shared_preferences: ^2.5.3
+  intl: ^0.20.2
+  flutter_native_splash: ^2.4.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  flutter_launcher_icons: ^0.14.4
+
+flutter:
+   uses-material-design: true
+
+   assets:
+    - assets/images/
+
+flutter_launcher_icons:
+  android: true
+  image_path: "assets/images/logo.png"
+  adaptive_icon_background: "#061B14"
+  adaptive_icon_foreground: "assets/images/logo.png"
+
+flutter_native_splash:
+  color: "#063B2C"
+  image: assets/images/Logo1.png
+
+  android: true
+  ios: false
+  web: false
+
+  android_12:
+    color: "#063B2C"
+    image: assets/images/Logo1.png
+    icon_background_color: "#063B2C"
