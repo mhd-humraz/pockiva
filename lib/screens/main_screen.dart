@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'home_screen.dart';
 import 'games_screen.dart';
+import 'tools_screen.dart';
 
 /// MainScreen hosts the bottom navigation bar and switches between
-/// the existing HomeScreen and the new GamesScreen using an IndexedStack.
+/// the existing HomeScreen, GamesScreen and the new ToolsScreen using an IndexedStack.
 /// It preserves the state of each tab (e.g., scroll position, loaded data).
 class MainScreen extends StatefulWidget {
   final bool isDark;
   final Future<void> Function() onToggleTheme;
 
-  const MainScreen({Key? key, required this.isDark, required this.onToggleTheme})
-      : super(key: key);
+  const MainScreen({super.key, required this.isDark, required this.onToggleTheme});
 
   @override
   State<MainScreen> createState() => _MainScreenState();
@@ -23,10 +23,11 @@ class _MainScreenState extends State<MainScreen> {
   @override
   void initState() {
     super.initState();
-    // Both pages are instantiated once so their internal state is kept.
+    // All pages are instantiated once so their state is retained.
     _pages = [
       HomeScreen(isDark: widget.isDark, onToggleTheme: widget.onToggleTheme),
       const GamesScreen(),
+      const ToolsScreen(),
     ];
   }
 
@@ -51,6 +52,11 @@ class _MainScreenState extends State<MainScreen> {
             icon: Icon(Icons.sports_esports_outlined),
             selectedIcon: Icon(Icons.sports_esports),
             label: 'Games',
+          ),
+          NavigationDestination(
+            icon: Icon(Icons.build_outlined),
+            selectedIcon: Icon(Icons.build),
+            label: 'Tools',
           ),
         ],
       ),

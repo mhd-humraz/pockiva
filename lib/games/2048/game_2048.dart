@@ -49,7 +49,6 @@ class Game2048 {
   /// Perform a move. Returns true if the board changed.
   bool move(MoveDirection dir) {
     // Transform grid so we can always treat the move as "left".
-    List<List<int?>> original = _cloneGrid(grid);
     List<List<int?>> transformed = _rotateForDirection(grid, dir);
     bool changed = false;
 
@@ -127,10 +126,12 @@ class Game2048 {
     return transposed;
   }
 
-  // Slides non‑null values to the left, filling gaps with null.
+  // Slides nonâ€‘null values to the left, filling gaps with null.
   List<int?> _compress(List<int?> row) {
     final newRow = row.where((v) => v != null).toList();
-    while (newRow.length < gridSize) newRow.add(null);
+    while (newRow.length < gridSize) {
+      newRow.add(null);
+    }
     return newRow;
   }
 
@@ -156,3 +157,4 @@ class Game2048 {
     return true;
   }
 }
+

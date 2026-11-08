@@ -152,7 +152,7 @@ class _GoalDetailScreenState extends State<GoalDetailScreen> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text('SAVED SO FAR', style: TextStyle(color: Theme.of(context).colorScheme.onPrimaryContainer.withOpacity(.7), fontSize: 11, fontWeight: FontWeight.w800, letterSpacing: 1)),
+                      Text('SAVED SO FAR', style: TextStyle(color: Theme.of(context).colorScheme.onPrimaryContainer.withValues(alpha: .7), fontSize: 11, fontWeight: FontWeight.w800, letterSpacing: 1)),
                       const SizedBox(height: 5),
                       Text(formatRupees(saved), style: TextStyle(fontSize: 32, fontWeight: FontWeight.w900, color: Theme.of(context).colorScheme.onPrimaryContainer)),
                       const SizedBox(height: 13),
@@ -194,7 +194,7 @@ class _GoalDetailScreenState extends State<GoalDetailScreen> {
                     padding: const EdgeInsets.only(bottom: 8),
                     child: Material(
                       color: isDone
-                          ? Theme.of(context).colorScheme.primaryContainer.withOpacity(.65)
+                          ? Theme.of(context).colorScheme.primaryContainer.withValues(alpha: .65)
                           : Theme.of(context).colorScheme.surfaceContainer,
                       borderRadius: BorderRadius.circular(15),
                       child: InkWell(
@@ -254,7 +254,7 @@ class _GoalDetailScreenState extends State<GoalDetailScreen> {
   Widget _stat(String label, String value) => Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(label, style: TextStyle(fontSize: 9, letterSpacing: .8, color: Theme.of(context).colorScheme.onPrimaryContainer.withOpacity(.7))),
+          Text(label, style: TextStyle(fontSize: 9, letterSpacing: .8, color: Theme.of(context).colorScheme.onPrimaryContainer.withValues(alpha: .7))),
           const SizedBox(height: 2),
           Text(value, style: TextStyle(fontWeight: FontWeight.w800, color: Theme.of(context).colorScheme.onPrimaryContainer)),
         ],

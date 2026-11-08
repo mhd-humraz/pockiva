@@ -85,7 +85,7 @@ class Save40AppState extends State<Save40App> {
       ),
 
       home: PockivaSplashScreen(
-        nextScreen: HomeScreen(
+        nextScreen: MainScreen(
           isDark: isDark,
           onToggleTheme: toggleTheme,
         ),
@@ -94,3 +94,4 @@ class Save40AppState extends State<Save40App> {
   }
 
 }
+

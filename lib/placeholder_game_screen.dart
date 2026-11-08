@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 /// Simple placeholder screen for games not yet implemented.
 class PlaceholderGameScreen extends StatelessWidget {
   final String title;
-  const PlaceholderGameScreen({Key? key, required this.title}) : super(key: key);
+  const PlaceholderGameScreen({super.key, required this.title});
 
   @override
   Widget build(BuildContext context) {
