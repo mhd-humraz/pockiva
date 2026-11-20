@@ -6,7 +6,7 @@ Pockiva is a simple, offline-first Android savings tracker built with Flutter. I
 
 ##   Download APK
 
-[⬇️ **Download Pockiva for Android**](https://github.com/mhd-humraz/pockiva/releases/download/v1.0.0/app-release.apk)
+[⬇️ **Download Pockiva for Android**](https://github.com/mhd-humraz/pockiva/releases/download/v1.0.1/app-release.apk)
 
 Download the latest APK, install it on your Android device, and start tracking your savings!
 
